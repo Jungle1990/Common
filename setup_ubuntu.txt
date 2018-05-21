@@ -1,0 +1,23 @@
+# refresh repos
+sudo apt update
+sudo apt dist-upgrade
+
+# install python2.7
+sudo apt install python
+sudo apt install python-pip
+
+# install virtualenv, virtualenvwrapper
+sudo pip install virtualenv
+sudo pip install virtualenvwrapper
+# add four lines to shell startup file (.zshrc)
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
+
+
+# install zsh, oh-my-zsh
+sudo apt install zsh
+chsh -s $(which zsh)
+# --> log out and login back
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
